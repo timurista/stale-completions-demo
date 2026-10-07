@@ -1,0 +1,17 @@
+name: test
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container: python:3.11-slim
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reproduce results byte for byte
+        run: |
+          python3 experiment.py --fixtures fixtures.json --out /tmp/results.json --trace /tmp/trace.json
+          test "$(sha256sum < /tmp/results.json)" = "$(sha256sum < results.json)"
+          test "$(sha256sum < /tmp/trace.json)" = "$(sha256sum < trace.json)"
+      - name: Tests
+        run: python3 -m unittest discover -p 'test_*.py' -v

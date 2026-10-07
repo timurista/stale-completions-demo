@@ -1,0 +1,4216 @@
+[
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "current",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "current",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "current",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "newest arrival wins",
+  "result_decision": "h1",
+  "tick": 3,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "current",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "current",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "current",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "result is for the current decision (verdict from the earlier check; not rechecked at write)",
+  "result_decision": "h1",
+  "tick": 3,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "current",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "current",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "current",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "result is for the current decision",
+  "result_decision": "h1",
+  "tick": 3,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "event": "start",
+  "history_size": 0,
+  "job": "j2",
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "job j2 bound to h2",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "newest arrival wins",
+  "result_decision": "h1",
+  "tick": 5,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "completion": "c2",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "newest arrival wins",
+  "result_decision": "h2",
+  "tick": 6,
+  "view_after": {
+   "active": "c2",
+   "status": "current"
+  },
+  "view_before": {
+   "active": "c1",
+   "status": "current"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for h2",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "event": "start",
+  "history_size": 0,
+  "job": "j2",
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "job j2 bound to h2",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "superseded",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "replaced by h2 (verdict from the earlier check; not rechecked at write)",
+  "result_decision": "h1",
+  "tick": 5,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "completion": "c2",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "result is for the current decision (verdict from the earlier check; not rechecked at write)",
+  "result_decision": "h2",
+  "tick": 6,
+  "view_after": {
+   "active": "c2",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "waiting for a result for h2",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "event": "start",
+  "history_size": 0,
+  "job": "j2",
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "job j2 bound to h2",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "superseded",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "replaced by h2",
+  "result_decision": "h1",
+  "tick": 5,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "correction-before",
+  "completion": "c2",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "result is for the current decision",
+  "result_decision": "h2",
+  "tick": 6,
+  "view_after": {
+   "active": "c2",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "event": "start",
+  "history_size": 0,
+  "job": "j2",
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "job j2 bound to h2",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "completion": "c2",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "newest arrival wins",
+  "result_decision": "h2",
+  "tick": 5,
+  "view_after": {
+   "active": "c2",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "newest arrival wins",
+  "result_decision": "h1",
+  "tick": 6,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": "c2",
+   "status": "current"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for h2",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "event": "start",
+  "history_size": 0,
+  "job": "j2",
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "job j2 bound to h2",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "completion": "c2",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "result is for the current decision (verdict from the earlier check; not rechecked at write)",
+  "result_decision": "h2",
+  "tick": 5,
+  "view_after": {
+   "active": "c2",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "superseded",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "replaced by h2 (verdict from the earlier check; not rechecked at write)",
+  "result_decision": "h1",
+  "tick": 6,
+  "view_after": {
+   "active": "c2",
+   "status": "current"
+  },
+  "view_before": {
+   "active": "c2",
+   "status": "current"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "waiting for a result for h2",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "event": "start",
+  "history_size": 0,
+  "job": "j2",
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "job j2 bound to h2",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "completion": "c2",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "result is for the current decision",
+  "result_decision": "h2",
+  "tick": 5,
+  "view_after": {
+   "active": "c2",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "superseded",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "out-of-order",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "replaced by h2",
+  "result_decision": "h1",
+  "tick": 6,
+  "view_after": {
+   "active": "c2",
+   "status": "current"
+  },
+  "view_before": {
+   "active": "c2",
+   "status": "current"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "cancel-before",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "cancel-before",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "cancelled"
+  },
+  "case": "cancel-before",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "cancelled"
+  },
+  "case": "cancel-before",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "newest arrival wins",
+  "result_decision": "h1",
+  "tick": 4,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "cancel-before",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "cancel-before",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "cancelled",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "cancelled"
+  },
+  "case": "cancel-before",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "goal cancelled; earlier admissions stay in history",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "cancelled"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "cancelled",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "cancelled"
+  },
+  "case": "cancel-before",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "goal was cancelled by h2 (verdict from the earlier check; not rechecked at write)",
+  "result_decision": "h1",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "cancelled"
+  },
+  "view_before": {
+   "active": null,
+   "status": "cancelled"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "cancel-before",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "cancel-before",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "cancelled",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "cancelled"
+  },
+  "case": "cancel-before",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "goal cancelled; earlier admissions stay in history",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "cancelled"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "cancelled",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "cancelled"
+  },
+  "case": "cancel-before",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "goal was cancelled by h2",
+  "result_decision": "h1",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "cancelled"
+  },
+  "view_before": {
+   "active": null,
+   "status": "cancelled"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "cancel-after",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "cancel-after",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "cancel-after",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "newest arrival wins",
+  "result_decision": "h1",
+  "tick": 3,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "cancelled"
+  },
+  "case": "cancel-after",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 4,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": "c1",
+   "status": "current"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "cancel-after",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "cancel-after",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "cancel-after",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "result is for the current decision (verdict from the earlier check; not rechecked at write)",
+  "result_decision": "h1",
+  "tick": 3,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "cancelled",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "cancelled"
+  },
+  "case": "cancel-after",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "goal cancelled; earlier admissions stay in history",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "cancelled"
+  },
+  "view_before": {
+   "active": "c1",
+   "status": "current"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "cancel-after",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "cancel-after",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "cancel-after",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "result is for the current decision",
+  "result_decision": "h1",
+  "tick": 3,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "cancelled",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "cancelled"
+  },
+  "case": "cancel-after",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "goal cancelled; earlier admissions stay in history",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "cancelled"
+  },
+  "view_before": {
+   "active": "c1",
+   "status": "current"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "duplicate",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "duplicate",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "duplicate",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "newest arrival wins",
+  "result_decision": "h1",
+  "tick": 3,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "duplicate",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "newest arrival wins",
+  "result_decision": "h1",
+  "tick": 4,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": "c1",
+   "status": "current"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "duplicate",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "duplicate",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "duplicate",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "result is for the current decision (verdict from the earlier check; not rechecked at write)",
+  "result_decision": "h1",
+  "tick": 3,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "duplicate",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "duplicate",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "same completion ID and payload already received (verdict from the earlier check; not rechecked at write)",
+  "result_decision": "h1",
+  "tick": 4,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": "c1",
+   "status": "current"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "duplicate",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "duplicate",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "duplicate",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "result is for the current decision",
+  "result_decision": "h1",
+  "tick": 3,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "duplicate",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "duplicate",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "same completion ID and payload already received",
+  "result_decision": "h1",
+  "tick": 4,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": "c1",
+   "status": "current"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "id-collision",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "id-collision",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "id-collision",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "newest arrival wins",
+  "result_decision": "h1",
+  "tick": 3,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "id-collision",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "newest arrival wins",
+  "result_decision": "h1",
+  "tick": 4,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": "c1",
+   "status": "current"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "id-collision",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "id-collision",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "id-collision",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "result is for the current decision (verdict from the earlier check; not rechecked at write)",
+  "result_decision": "h1",
+  "tick": 3,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "rejected-mismatch",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "id-collision",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "completion ID reused with different content (verdict from the earlier check; not rechecked at write)",
+  "result_decision": "h1",
+  "tick": 4,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": "c1",
+   "status": "current"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "id-collision",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "id-collision",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "id-collision",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "result is for the current decision",
+  "result_decision": "h1",
+  "tick": 3,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "rejected-mismatch",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "id-collision",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "completion ID reused with different content",
+  "result_decision": "h1",
+  "tick": 4,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": "c1",
+   "status": "current"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "check-write-race",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "check-write-race",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "check-write-race",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "check-write-race",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "newest arrival wins",
+  "result_decision": "h1",
+  "tick": 5,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "check-write-race",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "check-write-race",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "checked",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "check-write-race",
+  "completion": "c1",
+  "event": "check",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "guard read the decision (write happens later)",
+  "tick": 3,
+  "verdict": "admitted",
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "check-write-race",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for h2",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "check-write-race",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "result is for the current decision (verdict from the earlier check; not rechecked at write)",
+  "result_decision": "h1",
+  "tick": 5,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "check-write-race",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "check-write-race",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "check-write-race",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "waiting for a result for h2",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "superseded",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "check-write-race",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "replaced by h2",
+  "result_decision": "h1",
+  "tick": 5,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "f1"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "decision": "f1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "flight",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "f1"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "event": "start",
+  "history_size": 0,
+  "job": "k1",
+  "key": "flight",
+  "policy": "naive",
+  "reason": "job k1 bound to f1",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 5,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "f1"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "completion": "cf1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "flight",
+  "policy": "naive",
+  "reason": "newest arrival wins",
+  "result_decision": "f1",
+  "tick": 6,
+  "view_after": {
+   "active": "cf1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "newest arrival wins",
+  "result_decision": "h1",
+  "tick": 7,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "f1"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "decision": "f1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "flight",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for f1",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "f1"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "event": "start",
+  "history_size": 0,
+  "job": "k1",
+  "key": "flight",
+  "policy": "broken_guard",
+  "reason": "job k1 bound to f1",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for h2",
+  "tick": 5,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "f1"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "completion": "cf1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "flight",
+  "policy": "broken_guard",
+  "reason": "result is for the current decision (verdict from the earlier check; not rechecked at write)",
+  "result_decision": "f1",
+  "tick": 6,
+  "view_after": {
+   "active": "cf1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "superseded",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "replaced by h2 (verdict from the earlier check; not rechecked at write)",
+  "result_decision": "h1",
+  "tick": 7,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "f1"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "decision": "f1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "flight",
+  "policy": "corrected",
+  "reason": "waiting for a result for f1",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "f1"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "event": "start",
+  "history_size": 0,
+  "job": "k1",
+  "key": "flight",
+  "policy": "corrected",
+  "reason": "job k1 bound to f1",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "waiting for a result for h2",
+  "tick": 5,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "f1"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "completion": "cf1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "flight",
+  "policy": "corrected",
+  "reason": "result is for the current decision",
+  "result_decision": "f1",
+  "tick": 6,
+  "view_after": {
+   "active": "cf1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "superseded",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "independent-keys",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "replaced by h2",
+  "result_decision": "h1",
+  "tick": 7,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "competing-corrections",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h2a"
+   ],
+   "status": "open"
+  },
+  "case": "competing-corrections",
+  "decision": "h2a",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h2a",
+    "h2b"
+   ],
+   "status": "conflict"
+  },
+  "case": "competing-corrections",
+  "decision": "h2b",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h2a",
+    "h2b"
+   ],
+   "status": "conflict"
+  },
+  "case": "competing-corrections",
+  "event": "start",
+  "history_size": 0,
+  "job": "ja",
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "job ja bound to h2a",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h2a",
+    "h2b"
+   ],
+   "status": "conflict"
+  },
+  "case": "competing-corrections",
+  "event": "start",
+  "history_size": 0,
+  "job": "jb",
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "job jb bound to h2b",
+  "tick": 5,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h2a",
+    "h2b"
+   ],
+   "status": "conflict"
+  },
+  "case": "competing-corrections",
+  "completion": "ca",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "newest arrival wins",
+  "result_decision": "h2a",
+  "tick": 6,
+  "view_after": {
+   "active": "ca",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h2a",
+    "h2b"
+   ],
+   "status": "conflict"
+  },
+  "case": "competing-corrections",
+  "completion": "cb",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "newest arrival wins",
+  "result_decision": "h2b",
+  "tick": 7,
+  "view_after": {
+   "active": "cb",
+   "status": "current"
+  },
+  "view_before": {
+   "active": "ca",
+   "status": "current"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h3"
+   ],
+   "status": "open"
+  },
+  "case": "competing-corrections",
+  "decision": "h3",
+  "event": "decide",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 8,
+  "view_after": {
+   "active": "cb",
+   "status": "current"
+  },
+  "view_before": {
+   "active": "cb",
+   "status": "current"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "competing-corrections",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h2a"
+   ],
+   "status": "open"
+  },
+  "case": "competing-corrections",
+  "decision": "h2a",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for h2a",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "conflict",
+  "authority": {
+   "heads": [
+    "h2a",
+    "h2b"
+   ],
+   "status": "conflict"
+  },
+  "case": "competing-corrections",
+  "decision": "h2b",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "h2a, h2b both replace the same parent",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "conflict"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h2a",
+    "h2b"
+   ],
+   "status": "conflict"
+  },
+  "case": "competing-corrections",
+  "event": "start",
+  "history_size": 0,
+  "job": "ja",
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "job ja bound to h2a",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "conflict"
+  },
+  "view_before": {
+   "active": null,
+   "status": "conflict"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h2a",
+    "h2b"
+   ],
+   "status": "conflict"
+  },
+  "case": "competing-corrections",
+  "event": "start",
+  "history_size": 0,
+  "job": "jb",
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "job jb bound to h2b",
+  "tick": 5,
+  "view_after": {
+   "active": null,
+   "status": "conflict"
+  },
+  "view_before": {
+   "active": null,
+   "status": "conflict"
+  }
+ },
+ {
+  "action": "held-conflict",
+  "authority": {
+   "heads": [
+    "h2a",
+    "h2b"
+   ],
+   "status": "conflict"
+  },
+  "case": "competing-corrections",
+  "completion": "ca",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "2 decisions replace the same parent; none is current until resolved (verdict from the earlier check; not rechecked at write)",
+  "result_decision": "h2a",
+  "tick": 6,
+  "view_after": {
+   "active": null,
+   "status": "conflict"
+  },
+  "view_before": {
+   "active": null,
+   "status": "conflict"
+  }
+ },
+ {
+  "action": "held-conflict",
+  "authority": {
+   "heads": [
+    "h2a",
+    "h2b"
+   ],
+   "status": "conflict"
+  },
+  "case": "competing-corrections",
+  "completion": "cb",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "2 decisions replace the same parent; none is current until resolved (verdict from the earlier check; not rechecked at write)",
+  "result_decision": "h2b",
+  "tick": 7,
+  "view_after": {
+   "active": null,
+   "status": "conflict"
+  },
+  "view_before": {
+   "active": null,
+   "status": "conflict"
+  }
+ },
+ {
+  "action": "resolved",
+  "authority": {
+   "heads": [
+    "h3"
+   ],
+   "status": "open"
+  },
+  "case": "competing-corrections",
+  "decision": "h3",
+  "event": "decide",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "explicit resolution h3 adopts ca",
+  "tick": 8,
+  "view_after": {
+   "active": "ca",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "conflict"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "competing-corrections",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h2a"
+   ],
+   "status": "open"
+  },
+  "case": "competing-corrections",
+  "decision": "h2a",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "waiting for a result for h2a",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "conflict",
+  "authority": {
+   "heads": [
+    "h2a",
+    "h2b"
+   ],
+   "status": "conflict"
+  },
+  "case": "competing-corrections",
+  "decision": "h2b",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "h2a, h2b both replace the same parent",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "conflict"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h2a",
+    "h2b"
+   ],
+   "status": "conflict"
+  },
+  "case": "competing-corrections",
+  "event": "start",
+  "history_size": 0,
+  "job": "ja",
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "job ja bound to h2a",
+  "tick": 4,
+  "view_after": {
+   "active": null,
+   "status": "conflict"
+  },
+  "view_before": {
+   "active": null,
+   "status": "conflict"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h2a",
+    "h2b"
+   ],
+   "status": "conflict"
+  },
+  "case": "competing-corrections",
+  "event": "start",
+  "history_size": 0,
+  "job": "jb",
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "job jb bound to h2b",
+  "tick": 5,
+  "view_after": {
+   "active": null,
+   "status": "conflict"
+  },
+  "view_before": {
+   "active": null,
+   "status": "conflict"
+  }
+ },
+ {
+  "action": "held-conflict",
+  "authority": {
+   "heads": [
+    "h2a",
+    "h2b"
+   ],
+   "status": "conflict"
+  },
+  "case": "competing-corrections",
+  "completion": "ca",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "2 decisions replace the same parent; none is current until resolved",
+  "result_decision": "h2a",
+  "tick": 6,
+  "view_after": {
+   "active": null,
+   "status": "conflict"
+  },
+  "view_before": {
+   "active": null,
+   "status": "conflict"
+  }
+ },
+ {
+  "action": "held-conflict",
+  "authority": {
+   "heads": [
+    "h2a",
+    "h2b"
+   ],
+   "status": "conflict"
+  },
+  "case": "competing-corrections",
+  "completion": "cb",
+  "event": "complete",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "2 decisions replace the same parent; none is current until resolved",
+  "result_decision": "h2b",
+  "tick": 7,
+  "view_after": {
+   "active": null,
+   "status": "conflict"
+  },
+  "view_before": {
+   "active": null,
+   "status": "conflict"
+  }
+ },
+ {
+  "action": "resolved",
+  "authority": {
+   "heads": [
+    "h3"
+   ],
+   "status": "open"
+  },
+  "case": "competing-corrections",
+  "decision": "h3",
+  "event": "decide",
+  "history_size": 2,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "explicit resolution h3 adopts ca",
+  "tick": 8,
+  "view_after": {
+   "active": "ca",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "conflict"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "missing-update",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "missing-update",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "unseen",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "missing-update",
+  "event": "external",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "change exists outside the modeled authority",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "missing-update",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "newest arrival wins",
+  "result_decision": "h1",
+  "tick": 4,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "ignored",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "missing-update",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "naive",
+  "reason": "naive overwrite does not read decisions",
+  "tick": 5,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": "c1",
+   "status": "current"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "missing-update",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "missing-update",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "unseen",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "missing-update",
+  "event": "external",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "change exists outside the modeled authority",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "missing-update",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "result is for the current decision (verdict from the earlier check; not rechecked at write)",
+  "result_decision": "h1",
+  "tick": 4,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "missing-update",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "broken_guard",
+  "reason": "waiting for a result for h2",
+  "tick": 5,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": "c1",
+   "status": "current"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "missing-update",
+  "decision": "h1",
+  "event": "decide",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "waiting for a result for h1",
+  "tick": 1,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "started",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "missing-update",
+  "event": "start",
+  "history_size": 0,
+  "job": "j1",
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "job j1 bound to h1",
+  "tick": 2,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "unseen",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "missing-update",
+  "event": "external",
+  "history_size": 0,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "change exists outside the modeled authority",
+  "tick": 3,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "admitted",
+  "authority": {
+   "heads": [
+    "h1"
+   ],
+   "status": "open"
+  },
+  "case": "missing-update",
+  "completion": "c1",
+  "event": "complete",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "result is for the current decision",
+  "result_decision": "h1",
+  "tick": 4,
+  "view_after": {
+   "active": "c1",
+   "status": "current"
+  },
+  "view_before": {
+   "active": null,
+   "status": "pending"
+  }
+ },
+ {
+  "action": "awaiting",
+  "authority": {
+   "heads": [
+    "h2"
+   ],
+   "status": "open"
+  },
+  "case": "missing-update",
+  "decision": "h2",
+  "event": "decide",
+  "history_size": 1,
+  "key": "hotel",
+  "policy": "corrected",
+  "reason": "waiting for a result for h2",
+  "tick": 5,
+  "view_after": {
+   "active": null,
+   "status": "pending"
+  },
+  "view_before": {
+   "active": "c1",
+   "status": "current"
+  }
+ }
+]

@@ -1,0 +1,634 @@
+{
+  "version": 1,
+  "written_before_implementation": true,
+  "hypothesis": "Where the local authority has recorded a correction or cancellation before admission, a check bound to the write keeps an old completion from becoming active; arrival-order overwrite does not; a check made before a yield fails the race; unrelated keys still progress; current results are admitted.",
+  "naive_note": "Naive predictions describe the baseline's behavior, not desired behavior.",
+  "cases": {
+    "current": {
+      "corrected": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c1"
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ]
+        ]
+      },
+      "naive": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c1"
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ]
+        ]
+      },
+      "broken_guard": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c1"
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ]
+        ]
+      }
+    },
+    "correction-before": {
+      "corrected": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c2"
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "superseded"
+          ],
+          [
+            "c2",
+            "admitted"
+          ]
+        ]
+      },
+      "naive": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c2"
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ],
+          [
+            "c2",
+            "admitted"
+          ]
+        ]
+      },
+      "broken_guard": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c2"
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "superseded"
+          ],
+          [
+            "c2",
+            "admitted"
+          ]
+        ]
+      }
+    },
+    "out-of-order": {
+      "corrected": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c2"
+          }
+        },
+        "receipts": [
+          [
+            "c2",
+            "admitted"
+          ],
+          [
+            "c1",
+            "superseded"
+          ]
+        ]
+      },
+      "naive": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c1"
+          }
+        },
+        "receipts": [
+          [
+            "c2",
+            "admitted"
+          ],
+          [
+            "c1",
+            "admitted"
+          ]
+        ]
+      },
+      "broken_guard": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c2"
+          }
+        },
+        "receipts": [
+          [
+            "c2",
+            "admitted"
+          ],
+          [
+            "c1",
+            "superseded"
+          ]
+        ]
+      }
+    },
+    "cancel-before": {
+      "corrected": {
+        "final": {
+          "hotel": {
+            "status": "cancelled",
+            "active": null
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "cancelled"
+          ]
+        ]
+      },
+      "naive": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c1"
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ]
+        ]
+      },
+      "broken_guard": {
+        "final": {
+          "hotel": {
+            "status": "cancelled",
+            "active": null
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "cancelled"
+          ]
+        ]
+      }
+    },
+    "cancel-after": {
+      "corrected": {
+        "final": {
+          "hotel": {
+            "status": "cancelled",
+            "active": null
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ]
+        ],
+        "checkpoints": {
+          "3": {
+            "hotel": {
+              "status": "current",
+              "active": "c1"
+            }
+          }
+        }
+      },
+      "naive": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c1"
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ]
+        ]
+      },
+      "broken_guard": {
+        "final": {
+          "hotel": {
+            "status": "cancelled",
+            "active": null
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ]
+        ]
+      }
+    },
+    "duplicate": {
+      "corrected": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c1"
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ],
+          [
+            "c1",
+            "duplicate"
+          ]
+        ]
+      },
+      "naive": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c1"
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ],
+          [
+            "c1",
+            "admitted"
+          ]
+        ]
+      },
+      "broken_guard": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c1"
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ],
+          [
+            "c1",
+            "duplicate"
+          ]
+        ]
+      }
+    },
+    "id-collision": {
+      "corrected": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c1"
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ],
+          [
+            "c1",
+            "rejected-mismatch"
+          ]
+        ],
+        "active_payload": {
+          "hotel": "Hotel Alfama, 3 nights"
+        }
+      },
+      "naive": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c1"
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ],
+          [
+            "c1",
+            "admitted"
+          ]
+        ],
+        "active_payload": {
+          "hotel": "Hotel Baixa, 2 nights"
+        }
+      },
+      "broken_guard": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c1"
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ],
+          [
+            "c1",
+            "rejected-mismatch"
+          ]
+        ],
+        "active_payload": {
+          "hotel": "Hotel Alfama, 3 nights"
+        }
+      }
+    },
+    "check-write-race": {
+      "corrected": {
+        "final": {
+          "hotel": {
+            "status": "pending",
+            "active": null
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "superseded"
+          ]
+        ]
+      },
+      "naive": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c1"
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ]
+        ]
+      },
+      "broken_guard": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c1"
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ]
+        ]
+      }
+    },
+    "independent-keys": {
+      "corrected": {
+        "final": {
+          "hotel": {
+            "status": "pending",
+            "active": null
+          },
+          "flight": {
+            "status": "current",
+            "active": "cf1"
+          }
+        },
+        "receipts": [
+          [
+            "cf1",
+            "admitted"
+          ],
+          [
+            "c1",
+            "superseded"
+          ]
+        ]
+      },
+      "naive": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c1"
+          },
+          "flight": {
+            "status": "current",
+            "active": "cf1"
+          }
+        },
+        "receipts": [
+          [
+            "cf1",
+            "admitted"
+          ],
+          [
+            "c1",
+            "admitted"
+          ]
+        ]
+      },
+      "broken_guard": {
+        "final": {
+          "hotel": {
+            "status": "pending",
+            "active": null
+          },
+          "flight": {
+            "status": "current",
+            "active": "cf1"
+          }
+        },
+        "receipts": [
+          [
+            "cf1",
+            "admitted"
+          ],
+          [
+            "c1",
+            "superseded"
+          ]
+        ]
+      }
+    },
+    "competing-corrections": {
+      "corrected": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "ca"
+          }
+        },
+        "receipts": [
+          [
+            "ca",
+            "held-conflict"
+          ],
+          [
+            "cb",
+            "held-conflict"
+          ]
+        ],
+        "checkpoints": {
+          "7": {
+            "hotel": {
+              "status": "conflict",
+              "active": null
+            }
+          }
+        }
+      },
+      "naive": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "cb"
+          }
+        },
+        "receipts": [
+          [
+            "ca",
+            "admitted"
+          ],
+          [
+            "cb",
+            "admitted"
+          ]
+        ],
+        "checkpoints": {
+          "7": {
+            "hotel": {
+              "status": "current",
+              "active": "cb"
+            }
+          }
+        }
+      },
+      "broken_guard": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "ca"
+          }
+        },
+        "receipts": [
+          [
+            "ca",
+            "held-conflict"
+          ],
+          [
+            "cb",
+            "held-conflict"
+          ]
+        ],
+        "checkpoints": {
+          "7": {
+            "hotel": {
+              "status": "conflict",
+              "active": null
+            }
+          }
+        }
+      }
+    },
+    "missing-update": {
+      "corrected": {
+        "final": {
+          "hotel": {
+            "status": "pending",
+            "active": null
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ]
+        ],
+        "checkpoints": {
+          "4": {
+            "hotel": {
+              "status": "current",
+              "active": "c1"
+            }
+          }
+        },
+        "limitation": "Admitted at tick 4 because the authority had not received the correction. Prevention is only as good as what the authority knows."
+      },
+      "naive": {
+        "final": {
+          "hotel": {
+            "status": "current",
+            "active": "c1"
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ]
+        ]
+      },
+      "broken_guard": {
+        "final": {
+          "hotel": {
+            "status": "pending",
+            "active": null
+          }
+        },
+        "receipts": [
+          [
+            "c1",
+            "admitted"
+          ]
+        ],
+        "checkpoints": {
+          "4": {
+            "hotel": {
+              "status": "current",
+              "active": "c1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

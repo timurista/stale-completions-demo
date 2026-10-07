@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-labelledby="t d">
+<title id="t">Admission decision for a result that finishes after the goal changed</title>
+<desc id="d">Four steps: job j1 starts for goal h1; the user replaces h1 with h2; j1 finishes and its result c1 arrives; admission compares c1's goal h1 with the current goal h2 and keeps c1 as superseded instead of making it active.</desc>
+<rect width="1200" height="520" fill="#0B0F14"/>
+<text x="40" y="58" fill="#35D0B0" font-family="JetBrains Mono, Menlo, monospace" font-size="15" letter-spacing="2">SYNTHETIC SCHEDULE · CASE “OUT-OF-ORDER”</text>
+<text x="40" y="98" fill="#E8EDF3" font-family="Inter, system-ui, sans-serif" font-size="30" font-weight="700">The worker finished. Does the result still apply?</text>
+<rect x="40" y="150" width="250" height="190" rx="16" fill="#0F141B" stroke="#1E2733" stroke-width="2"/>
+<text x="62" y="190" fill="#9AA6B5" font-family="JetBrains Mono, Menlo, monospace" font-size="15">STEP 1</text>
+<text x="62" y="230" fill="#E8EDF3" font-family="Inter, system-ui, sans-serif" font-size="21" font-weight="700">Job j1 starts</text>
+<text x="62" y="264" fill="#9AA6B5" font-family="Inter, system-ui, sans-serif" font-size="17">bound to goal h1</text>
+<text x="62" y="296" fill="#9AA6B5" font-family="Inter, system-ui, sans-serif" font-size="17">“Hotel in Lisbon”</text>
+<path d="M294 245 h21" stroke="#9AA6B5" stroke-width="3"/><path d="M315 237 l9 8 l-9 8 z" fill="#9AA6B5"/>
+<rect x="323" y="150" width="250" height="190" rx="16" fill="#0F141B" stroke="#1E2733" stroke-width="2"/>
+<text x="345" y="190" fill="#9AA6B5" font-family="JetBrains Mono, Menlo, monospace" font-size="15">STEP 2</text>
+<text x="345" y="230" fill="#E8EDF3" font-family="Inter, system-ui, sans-serif" font-size="21" font-weight="700">User changes the goal</text>
+<text x="345" y="264" fill="#9AA6B5" font-family="Inter, system-ui, sans-serif" font-size="17">h2 replaces h1</text>
+<text x="345" y="296" fill="#9AA6B5" font-family="Inter, system-ui, sans-serif" font-size="17">“Hotel in Porto”</text>
+<path d="M577 245 h21" stroke="#9AA6B5" stroke-width="3"/><path d="M598 237 l9 8 l-9 8 z" fill="#9AA6B5"/>
+<rect x="606" y="150" width="250" height="190" rx="16" fill="#0F141B" stroke="#1E2733" stroke-width="2"/>
+<text x="628" y="190" fill="#9AA6B5" font-family="JetBrains Mono, Menlo, monospace" font-size="15">STEP 3</text>
+<text x="628" y="230" fill="#E8EDF3" font-family="Inter, system-ui, sans-serif" font-size="21" font-weight="700">Old job finishes</text>
+<text x="628" y="264" fill="#9AA6B5" font-family="Inter, system-ui, sans-serif" font-size="17">result c1, made for h1</text>
+<text x="628" y="296" fill="#9AA6B5" font-family="Inter, system-ui, sans-serif" font-size="17">arrives after c2</text>
+<path d="M860 245 h21" stroke="#9AA6B5" stroke-width="3"/><path d="M881 237 l9 8 l-9 8 z" fill="#9AA6B5"/>
+<rect x="889" y="150" width="250" height="190" rx="16" fill="#0F141B" stroke="#35D0B0" stroke-width="2"/>
+<text x="911" y="190" fill="#35D0B0" font-family="JetBrains Mono, Menlo, monospace" font-size="15">STEP 4</text>
+<text x="911" y="230" fill="#E8EDF3" font-family="Inter, system-ui, sans-serif" font-size="21" font-weight="700">Admission decision</text>
+<text x="911" y="264" fill="#9AA6B5" font-family="Inter, system-ui, sans-serif" font-size="17">is h1 still the goal?</text>
+<text x="911" y="296" fill="#9AA6B5" font-family="Inter, system-ui, sans-serif" font-size="17">no: keep c1 as superseded</text>
+<rect x="40" y="380" width="1120" height="92" rx="14" fill="none" stroke="#1E2733" stroke-width="2"/>
+<text x="64" y="418" fill="#EF7A6D" font-family="JetBrains Mono, Menlo, monospace" font-size="15">OVERWRITE ON ARRIVAL</text>
+<text x="64" y="448" fill="#E8EDF3" font-family="Inter, system-ui, sans-serif" font-size="18">c1 arrives last, so it becomes the active hotel: Lisbon, a goal the user already replaced.</text>
+<text x="1160" y="505" text-anchor="end" fill="#9AA6B5" font-family="Inter, system-ui, sans-serif" font-size="14">Code-rendered from build_diagram.py · outcomes from results.json</text>
+</svg>

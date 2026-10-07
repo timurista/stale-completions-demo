@@ -1,0 +1,545 @@
+{
+  "version": 1,
+  "synthetic": true,
+  "description": "Authored synthetic schedules for one fictional itinerary draft. Ticks are ordering devices, not latency. No real users, bookings or external actions.",
+  "cases": [
+    {
+      "case": "current",
+      "title": "Current completion",
+      "note": "Nothing changed; the result should simply become active.",
+      "events": [
+        {
+          "tick": 1,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h1",
+          "parents": [],
+          "kind": "goal"
+        },
+        {
+          "tick": 2,
+          "type": "start",
+          "key": "hotel",
+          "job": "j1",
+          "decision": "h1",
+          "content": "Find a hotel in Lisbon"
+        },
+        {
+          "tick": 3,
+          "type": "complete",
+          "key": "hotel",
+          "completion": "c1",
+          "job": "j1",
+          "payload": "Hotel Alfama, 3 nights"
+        }
+      ]
+    },
+    {
+      "case": "correction-before",
+      "title": "Correction before completion",
+      "note": "User changed the city; the Lisbon result arrives first, then the Porto one.",
+      "events": [
+        {
+          "tick": 1,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h1",
+          "parents": [],
+          "kind": "goal"
+        },
+        {
+          "tick": 2,
+          "type": "start",
+          "key": "hotel",
+          "job": "j1",
+          "decision": "h1",
+          "content": "Find a hotel in Lisbon"
+        },
+        {
+          "tick": 3,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h2",
+          "parents": [
+            "h1"
+          ],
+          "kind": "goal"
+        },
+        {
+          "tick": 4,
+          "type": "start",
+          "key": "hotel",
+          "job": "j2",
+          "decision": "h2",
+          "content": "Find a hotel in Porto"
+        },
+        {
+          "tick": 5,
+          "type": "complete",
+          "key": "hotel",
+          "completion": "c1",
+          "job": "j1",
+          "payload": "Hotel Alfama, Lisbon"
+        },
+        {
+          "tick": 6,
+          "type": "complete",
+          "key": "hotel",
+          "completion": "c2",
+          "job": "j2",
+          "payload": "Hotel Ribeira, Porto"
+        }
+      ]
+    },
+    {
+      "case": "out-of-order",
+      "title": "Out-of-order completion",
+      "note": "The superseded Lisbon job finishes last.",
+      "events": [
+        {
+          "tick": 1,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h1",
+          "parents": [],
+          "kind": "goal"
+        },
+        {
+          "tick": 2,
+          "type": "start",
+          "key": "hotel",
+          "job": "j1",
+          "decision": "h1",
+          "content": "Find a hotel in Lisbon"
+        },
+        {
+          "tick": 3,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h2",
+          "parents": [
+            "h1"
+          ],
+          "kind": "goal"
+        },
+        {
+          "tick": 4,
+          "type": "start",
+          "key": "hotel",
+          "job": "j2",
+          "decision": "h2",
+          "content": "Find a hotel in Porto"
+        },
+        {
+          "tick": 5,
+          "type": "complete",
+          "key": "hotel",
+          "completion": "c2",
+          "job": "j2",
+          "payload": "Hotel Ribeira, Porto"
+        },
+        {
+          "tick": 6,
+          "type": "complete",
+          "key": "hotel",
+          "completion": "c1",
+          "job": "j1",
+          "payload": "Hotel Alfama, Lisbon"
+        }
+      ]
+    },
+    {
+      "case": "cancel-before",
+      "title": "Cancellation before completion",
+      "note": "User cancelled the hotel search; the worker still finishes.",
+      "events": [
+        {
+          "tick": 1,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h1",
+          "parents": [],
+          "kind": "goal"
+        },
+        {
+          "tick": 2,
+          "type": "start",
+          "key": "hotel",
+          "job": "j1",
+          "decision": "h1",
+          "content": "Find a hotel in Lisbon"
+        },
+        {
+          "tick": 3,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h2",
+          "parents": [
+            "h1"
+          ],
+          "kind": "cancel"
+        },
+        {
+          "tick": 4,
+          "type": "complete",
+          "key": "hotel",
+          "completion": "c1",
+          "job": "j1",
+          "payload": "Hotel Alfama, Lisbon"
+        }
+      ]
+    },
+    {
+      "case": "cancel-after",
+      "title": "Cancellation after admission",
+      "note": "Result was admitted, then the user cancelled.",
+      "events": [
+        {
+          "tick": 1,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h1",
+          "parents": [],
+          "kind": "goal"
+        },
+        {
+          "tick": 2,
+          "type": "start",
+          "key": "hotel",
+          "job": "j1",
+          "decision": "h1",
+          "content": "Find a hotel in Lisbon"
+        },
+        {
+          "tick": 3,
+          "type": "complete",
+          "key": "hotel",
+          "completion": "c1",
+          "job": "j1",
+          "payload": "Hotel Alfama, Lisbon"
+        },
+        {
+          "tick": 4,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h2",
+          "parents": [
+            "h1"
+          ],
+          "kind": "cancel"
+        }
+      ]
+    },
+    {
+      "case": "duplicate",
+      "title": "Duplicate delivery",
+      "note": "The same completion is delivered twice.",
+      "events": [
+        {
+          "tick": 1,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h1",
+          "parents": [],
+          "kind": "goal"
+        },
+        {
+          "tick": 2,
+          "type": "start",
+          "key": "hotel",
+          "job": "j1",
+          "decision": "h1",
+          "content": "Find a hotel in Lisbon"
+        },
+        {
+          "tick": 3,
+          "type": "complete",
+          "key": "hotel",
+          "completion": "c1",
+          "job": "j1",
+          "payload": "Hotel Alfama, 3 nights"
+        },
+        {
+          "tick": 4,
+          "type": "complete",
+          "key": "hotel",
+          "completion": "c1",
+          "job": "j1",
+          "payload": "Hotel Alfama, 3 nights"
+        }
+      ]
+    },
+    {
+      "case": "id-collision",
+      "title": "Completion ID collision",
+      "note": "A second delivery reuses the completion ID with different content.",
+      "events": [
+        {
+          "tick": 1,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h1",
+          "parents": [],
+          "kind": "goal"
+        },
+        {
+          "tick": 2,
+          "type": "start",
+          "key": "hotel",
+          "job": "j1",
+          "decision": "h1",
+          "content": "Find a hotel in Lisbon"
+        },
+        {
+          "tick": 3,
+          "type": "complete",
+          "key": "hotel",
+          "completion": "c1",
+          "job": "j1",
+          "payload": "Hotel Alfama, 3 nights"
+        },
+        {
+          "tick": 4,
+          "type": "complete",
+          "key": "hotel",
+          "completion": "c1",
+          "job": "j1",
+          "payload": "Hotel Baixa, 2 nights"
+        }
+      ]
+    },
+    {
+      "case": "check-write-race",
+      "title": "Check/write race",
+      "note": "The guard checks at tick 3, the user corrects at tick 4, the write lands at tick 5.",
+      "events": [
+        {
+          "tick": 1,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h1",
+          "parents": [],
+          "kind": "goal"
+        },
+        {
+          "tick": 2,
+          "type": "start",
+          "key": "hotel",
+          "job": "j1",
+          "decision": "h1",
+          "content": "Find a hotel in Lisbon"
+        },
+        {
+          "tick": 4,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h2",
+          "parents": [
+            "h1"
+          ],
+          "kind": "goal"
+        },
+        {
+          "tick": 5,
+          "type": "complete",
+          "key": "hotel",
+          "completion": "c1",
+          "job": "j1",
+          "payload": "Hotel Alfama, Lisbon",
+          "check_tick": 3
+        }
+      ]
+    },
+    {
+      "case": "independent-keys",
+      "title": "Independent keys",
+      "note": "A hotel correction must not block the flight result.",
+      "events": [
+        {
+          "tick": 1,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h1",
+          "parents": [],
+          "kind": "goal"
+        },
+        {
+          "tick": 2,
+          "type": "start",
+          "key": "hotel",
+          "job": "j1",
+          "decision": "h1",
+          "content": "Find a hotel in Lisbon"
+        },
+        {
+          "tick": 3,
+          "type": "decide",
+          "key": "flight",
+          "decision": "f1",
+          "parents": [],
+          "kind": "goal"
+        },
+        {
+          "tick": 4,
+          "type": "start",
+          "key": "flight",
+          "job": "k1",
+          "decision": "f1",
+          "content": "Find a flight to Lisbon"
+        },
+        {
+          "tick": 5,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h2",
+          "parents": [
+            "h1"
+          ],
+          "kind": "goal"
+        },
+        {
+          "tick": 6,
+          "type": "complete",
+          "key": "flight",
+          "completion": "cf1",
+          "job": "k1",
+          "payload": "TP 1351, 08:40"
+        },
+        {
+          "tick": 7,
+          "type": "complete",
+          "key": "hotel",
+          "completion": "c1",
+          "job": "j1",
+          "payload": "Hotel Alfama, Lisbon"
+        }
+      ]
+    },
+    {
+      "case": "competing-corrections",
+      "title": "Competing corrections",
+      "note": "Two corrections replace the same decision (e.g. two devices). Neither is ordered by time.",
+      "events": [
+        {
+          "tick": 1,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h1",
+          "parents": [],
+          "kind": "goal"
+        },
+        {
+          "tick": 2,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h2a",
+          "parents": [
+            "h1"
+          ],
+          "kind": "goal"
+        },
+        {
+          "tick": 3,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h2b",
+          "parents": [
+            "h1"
+          ],
+          "kind": "goal"
+        },
+        {
+          "tick": 4,
+          "type": "start",
+          "key": "hotel",
+          "job": "ja",
+          "decision": "h2a",
+          "content": "Find a hotel near the river"
+        },
+        {
+          "tick": 5,
+          "type": "start",
+          "key": "hotel",
+          "job": "jb",
+          "decision": "h2b",
+          "content": "Find a hotel near the airport"
+        },
+        {
+          "tick": 6,
+          "type": "complete",
+          "key": "hotel",
+          "completion": "ca",
+          "job": "ja",
+          "payload": "Hotel Ribeira"
+        },
+        {
+          "tick": 7,
+          "type": "complete",
+          "key": "hotel",
+          "completion": "cb",
+          "job": "jb",
+          "payload": "Hotel Aeroporto"
+        },
+        {
+          "tick": 8,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h3",
+          "parents": [
+            "h2a",
+            "h2b"
+          ],
+          "kind": "resolution",
+          "adopt": "ca"
+        }
+      ]
+    },
+    {
+      "case": "missing-update",
+      "title": "Missing update boundary",
+      "note": "The correction exists elsewhere but reaches the authority only after the old result.",
+      "events": [
+        {
+          "tick": 1,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h1",
+          "parents": [],
+          "kind": "goal"
+        },
+        {
+          "tick": 2,
+          "type": "start",
+          "key": "hotel",
+          "job": "j1",
+          "decision": "h1",
+          "content": "Find a hotel in Lisbon"
+        },
+        {
+          "tick": 3,
+          "type": "external",
+          "key": "hotel",
+          "note": "User told a different assistant to switch to Porto; not yet received"
+        },
+        {
+          "tick": 4,
+          "type": "complete",
+          "key": "hotel",
+          "completion": "c1",
+          "job": "j1",
+          "payload": "Hotel Alfama, Lisbon"
+        },
+        {
+          "tick": 5,
+          "type": "decide",
+          "key": "hotel",
+          "decision": "h2",
+          "parents": [
+            "h1"
+          ],
+          "kind": "goal"
+        }
+      ]
+    }
+  ]
+}

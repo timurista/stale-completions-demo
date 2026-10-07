@@ -1,0 +1,8 @@
+{
+  "name": "stale-work demo (standard-library Python)",
+  "image": "python:3.11-slim",
+  "workspaceFolder": "/work",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/work,type=bind",
+  "postCreateCommand": "python3 -m unittest discover -p 'test_*.py' -v",
+  "runArgs": ["--network=none"]
+}

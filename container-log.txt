@@ -1,0 +1,19 @@
+$ docker run --rm --network=none -v $PWD:/src:ro python:3.11-slim sh -c 'cp -r /src /work && cd /work && python3 --version && python3 experiment.py --out /tmp/results.json --trace /tmp/trace.json && sha256sum /tmp/results.json /tmp/trace.json && python3 -m unittest discover -p "test_*.py"'
+Python 3.11.16
+naive         view right 3/11  view+receipts right 1/11  matches prediction 11/11
+              wrong view: out-of-order, cancel-before, cancel-after, id-collision, check-write-race, independent-keys, competing-corrections, missing-update
+broken_guard  view right 10/11  view+receipts right 10/11  matches prediction 11/11
+              wrong view: check-write-race
+corrected     view right 11/11  view+receipts right 11/11  matches prediction 11/11
+              wrong view: -
+c11125303057b105120e4480d00df1274deb61aa5837e394dd31dce57815eeb6  /tmp/results.json
+7cf290a5eae7b2058787954865b11ab83ab154948926ba42ecfcb3680e5b6923  /tmp/trace.json
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.007s
+
+OK
+exit=0
+host:
+c11125303057b105120e4480d00df1274deb61aa5837e394dd31dce57815eeb6  results.json
+7cf290a5eae7b2058787954865b11ab83ab154948926ba42ecfcb3680e5b6923  trace.json

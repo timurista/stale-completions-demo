@@ -1,0 +1,36 @@
+$ python3 --version
+Python 3.11.15
+$ python3 experiment.py --fixtures fixtures.json --out results.json
+naive         view right 3/11  view+receipts right 1/11  matches prediction 11/11
+              wrong view: out-of-order, cancel-before, cancel-after, id-collision, check-write-race, independent-keys, competing-corrections, missing-update
+broken_guard  view right 10/11  view+receipts right 10/11  matches prediction 11/11
+              wrong view: check-write-race
+corrected     view right 11/11  view+receipts right 11/11  matches prediction 11/11
+              wrong view: -
+exit=0
+$ python3 -m unittest discover -p 'test_*.py' -v
+test_broken_guard_fails_only_the_race (test_experiment.Controls.test_broken_guard_fails_only_the_race) ... ok
+test_every_policy_matches_its_frozen_prediction (test_experiment.Controls.test_every_policy_matches_its_frozen_prediction) ... ok
+test_naive_lets_arrival_order_pick_a_conflict_winner (test_experiment.Controls.test_naive_lets_arrival_order_pick_a_conflict_winner) ... ok
+test_naive_lets_the_delayed_old_result_win (test_experiment.Controls.test_naive_lets_the_delayed_old_result_win) ... ok
+test_naive_resurrects_a_cancelled_goal (test_experiment.Controls.test_naive_resurrects_a_cancelled_goal) ... ok
+test_a_correction_on_one_key_does_not_block_another (test_experiment.Corrected.test_a_correction_on_one_key_does_not_block_another) ... ok
+test_conflict_is_visible_and_needs_an_explicit_resolution (test_experiment.Corrected.test_conflict_is_visible_and_needs_an_explicit_resolution) ... ok
+test_current_completion_is_admitted_without_deferral (test_experiment.Corrected.test_current_completion_is_admitted_without_deferral) ... ok
+test_delayed_old_result_cannot_overwrite_the_newer_one (test_experiment.Corrected.test_delayed_old_result_cannot_overwrite_the_newer_one) ... ok
+test_duplicate_is_idempotent_and_collision_is_rejected (test_experiment.Corrected.test_duplicate_is_idempotent_and_collision_is_rejected) ... ok
+test_every_case_meets_the_frozen_expectation (test_experiment.Corrected.test_every_case_meets_the_frozen_expectation) ... ok
+test_missing_update_is_admitted_then_demoted_and_that_is_the_documented_limit (test_experiment.Corrected.test_missing_update_is_admitted_then_demoted_and_that_is_the_documented_limit) ... ok
+test_fixtures_are_labelled_synthetic_and_cover_the_matrix (test_experiment.Frozen.test_fixtures_are_labelled_synthetic_and_cover_the_matrix) ... ok
+test_inputs_match_the_hashes_frozen_before_implementation (test_experiment.Frozen.test_inputs_match_the_hashes_frozen_before_implementation) ... ok
+test_an_active_result_always_belongs_to_the_authority_head (test_experiment.Properties.test_an_active_result_always_belongs_to_the_authority_head) ... ok
+test_no_active_result_after_a_recorded_cancellation (test_experiment.Properties.test_no_active_result_after_a_recorded_cancellation) ... ok
+test_no_active_result_while_the_authority_has_competing_heads (test_experiment.Properties.test_no_active_result_while_the_authority_has_competing_heads) ... ok
+test_nothing_received_is_ever_dropped_from_history (test_experiment.Properties.test_nothing_received_is_ever_dropped_from_history) ... ok
+test_runs_are_repeatable_and_results_file_is_current (test_experiment.Properties.test_runs_are_repeatable_and_results_file_is_current) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.005s
+
+OK
+exit=0

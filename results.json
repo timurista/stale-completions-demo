@@ -1,0 +1,2522 @@
+{
+  "cases": [
+    {
+      "case": "current",
+      "note": "Nothing changed; the result should simply become active.",
+      "policies": {
+        "broken_guard": {
+          "active_payload": {
+            "hotel": "Hotel Alfama, 3 nights"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": "c1",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, 3 nights",
+              "tick": 3
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "corrected": {
+          "active_payload": {
+            "hotel": "Hotel Alfama, 3 nights"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": "c1",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, 3 nights",
+              "tick": 3
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "naive": {
+          "active_payload": {
+            "hotel": "Hotel Alfama, 3 nights"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": "c1",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, 3 nights",
+              "tick": 3
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": true
+        }
+      },
+      "title": "Current completion"
+    },
+    {
+      "case": "correction-before",
+      "note": "User changed the city; the Lisbon result arrives first, then the Porto one.",
+      "policies": {
+        "broken_guard": {
+          "active_payload": {
+            "hotel": "Hotel Ribeira, Porto"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "5": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "6": {
+              "hotel": {
+                "active": "c2",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": "c2",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "superseded",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 5
+            },
+            {
+              "completion": "c2",
+              "decision": "h2",
+              "outcome": "admitted",
+              "payload": "Hotel Ribeira, Porto",
+              "tick": 6
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "superseded"
+            ],
+            [
+              "c2",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "corrected": {
+          "active_payload": {
+            "hotel": "Hotel Ribeira, Porto"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "5": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "6": {
+              "hotel": {
+                "active": "c2",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": "c2",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "superseded",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 5
+            },
+            {
+              "completion": "c2",
+              "decision": "h2",
+              "outcome": "admitted",
+              "payload": "Hotel Ribeira, Porto",
+              "tick": 6
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "superseded"
+            ],
+            [
+              "c2",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "naive": {
+          "active_payload": {
+            "hotel": "Hotel Ribeira, Porto"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "5": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            },
+            "6": {
+              "hotel": {
+                "active": "c2",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [
+            "receipts = [['c1', 'admitted'], ['c2', 'admitted']] expected [['c1', 'superseded'], ['c2', 'admitted']]"
+          ],
+          "final": {
+            "hotel": {
+              "active": "c2",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 5
+            },
+            {
+              "completion": "c2",
+              "decision": "h2",
+              "outcome": "admitted",
+              "payload": "Hotel Ribeira, Porto",
+              "tick": 6
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": false,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ],
+            [
+              "c2",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": true
+        }
+      },
+      "title": "Correction before completion"
+    },
+    {
+      "case": "out-of-order",
+      "note": "The superseded Lisbon job finishes last.",
+      "policies": {
+        "broken_guard": {
+          "active_payload": {
+            "hotel": "Hotel Ribeira, Porto"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "5": {
+              "hotel": {
+                "active": "c2",
+                "status": "current"
+              }
+            },
+            "6": {
+              "hotel": {
+                "active": "c2",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": "c2",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c2",
+              "decision": "h2",
+              "outcome": "admitted",
+              "payload": "Hotel Ribeira, Porto",
+              "tick": 5
+            },
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "superseded",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 6
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c2",
+              "admitted"
+            ],
+            [
+              "c1",
+              "superseded"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "corrected": {
+          "active_payload": {
+            "hotel": "Hotel Ribeira, Porto"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "5": {
+              "hotel": {
+                "active": "c2",
+                "status": "current"
+              }
+            },
+            "6": {
+              "hotel": {
+                "active": "c2",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": "c2",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c2",
+              "decision": "h2",
+              "outcome": "admitted",
+              "payload": "Hotel Ribeira, Porto",
+              "tick": 5
+            },
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "superseded",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 6
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c2",
+              "admitted"
+            ],
+            [
+              "c1",
+              "superseded"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "naive": {
+          "active_payload": {
+            "hotel": "Hotel Alfama, Lisbon"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "5": {
+              "hotel": {
+                "active": "c2",
+                "status": "current"
+              }
+            },
+            "6": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [
+            "final[hotel] = {'status': 'current', 'active': 'c1'} expected {'status': 'current', 'active': 'c2'}",
+            "receipts = [['c2', 'admitted'], ['c1', 'admitted']] expected [['c2', 'admitted'], ['c1', 'superseded']]"
+          ],
+          "final": {
+            "hotel": {
+              "active": "c1",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c2",
+              "decision": "h2",
+              "outcome": "admitted",
+              "payload": "Hotel Ribeira, Porto",
+              "tick": 5
+            },
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 6
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": false,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c2",
+              "admitted"
+            ],
+            [
+              "c1",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": false
+        }
+      },
+      "title": "Out-of-order completion"
+    },
+    {
+      "case": "cancel-before",
+      "note": "User cancelled the hotel search; the worker still finishes.",
+      "policies": {
+        "broken_guard": {
+          "active_payload": {
+            "hotel": null
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": null,
+                "status": "cancelled"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": null,
+                "status": "cancelled"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": null,
+              "status": "cancelled"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "cancelled",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 4
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "cancelled"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "corrected": {
+          "active_payload": {
+            "hotel": null
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": null,
+                "status": "cancelled"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": null,
+                "status": "cancelled"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": null,
+              "status": "cancelled"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "cancelled",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 4
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "cancelled"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "naive": {
+          "active_payload": {
+            "hotel": "Hotel Alfama, Lisbon"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [
+            "final[hotel] = {'status': 'current', 'active': 'c1'} expected {'status': 'cancelled', 'active': None}",
+            "receipts = [['c1', 'admitted']] expected [['c1', 'cancelled']]"
+          ],
+          "final": {
+            "hotel": {
+              "active": "c1",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 4
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": false,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": false
+        }
+      },
+      "title": "Cancellation before completion"
+    },
+    {
+      "case": "cancel-after",
+      "note": "Result was admitted, then the user cancelled.",
+      "policies": {
+        "broken_guard": {
+          "active_payload": {
+            "hotel": null
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": null,
+                "status": "cancelled"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": null,
+              "status": "cancelled"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 3
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "corrected": {
+          "active_payload": {
+            "hotel": null
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": null,
+                "status": "cancelled"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": null,
+              "status": "cancelled"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 3
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "naive": {
+          "active_payload": {
+            "hotel": "Hotel Alfama, Lisbon"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [
+            "final[hotel] = {'status': 'current', 'active': 'c1'} expected {'status': 'cancelled', 'active': None}"
+          ],
+          "final": {
+            "hotel": {
+              "active": "c1",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 3
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": false,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": false
+        }
+      },
+      "title": "Cancellation after admission"
+    },
+    {
+      "case": "duplicate",
+      "note": "The same completion is delivered twice.",
+      "policies": {
+        "broken_guard": {
+          "active_payload": {
+            "hotel": "Hotel Alfama, 3 nights"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": "c1",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, 3 nights",
+              "tick": 3
+            },
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "duplicate",
+              "payload": "Hotel Alfama, 3 nights",
+              "tick": 4
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ],
+            [
+              "c1",
+              "duplicate"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "corrected": {
+          "active_payload": {
+            "hotel": "Hotel Alfama, 3 nights"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": "c1",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, 3 nights",
+              "tick": 3
+            },
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "duplicate",
+              "payload": "Hotel Alfama, 3 nights",
+              "tick": 4
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ],
+            [
+              "c1",
+              "duplicate"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "naive": {
+          "active_payload": {
+            "hotel": "Hotel Alfama, 3 nights"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [
+            "receipts = [['c1', 'admitted'], ['c1', 'admitted']] expected [['c1', 'admitted'], ['c1', 'duplicate']]"
+          ],
+          "final": {
+            "hotel": {
+              "active": "c1",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, 3 nights",
+              "tick": 3
+            },
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, 3 nights",
+              "tick": 4
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": false,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ],
+            [
+              "c1",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": true
+        }
+      },
+      "title": "Duplicate delivery"
+    },
+    {
+      "case": "id-collision",
+      "note": "A second delivery reuses the completion ID with different content.",
+      "policies": {
+        "broken_guard": {
+          "active_payload": {
+            "hotel": "Hotel Alfama, 3 nights"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": "c1",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, 3 nights",
+              "tick": 3
+            },
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "rejected-mismatch",
+              "payload": "Hotel Baixa, 2 nights",
+              "tick": 4
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ],
+            [
+              "c1",
+              "rejected-mismatch"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "corrected": {
+          "active_payload": {
+            "hotel": "Hotel Alfama, 3 nights"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": "c1",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, 3 nights",
+              "tick": 3
+            },
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "rejected-mismatch",
+              "payload": "Hotel Baixa, 2 nights",
+              "tick": 4
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ],
+            [
+              "c1",
+              "rejected-mismatch"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "naive": {
+          "active_payload": {
+            "hotel": "Hotel Baixa, 2 nights"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [
+            "receipts = [['c1', 'admitted'], ['c1', 'admitted']] expected [['c1', 'admitted'], ['c1', 'rejected-mismatch']]",
+            "active_payload[hotel] = 'Hotel Baixa, 2 nights' expected 'Hotel Alfama, 3 nights'"
+          ],
+          "final": {
+            "hotel": {
+              "active": "c1",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, 3 nights",
+              "tick": 3
+            },
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Baixa, 2 nights",
+              "tick": 4
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": false,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ],
+            [
+              "c1",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": false
+        }
+      },
+      "title": "Completion ID collision"
+    },
+    {
+      "case": "check-write-race",
+      "note": "The guard checks at tick 3, the user corrects at tick 4, the write lands at tick 5.",
+      "policies": {
+        "broken_guard": {
+          "active_payload": {
+            "hotel": "Hotel Alfama, Lisbon"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "5": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [
+            "final[hotel] = {'status': 'current', 'active': 'c1'} expected {'status': 'pending', 'active': None}",
+            "receipts = [['c1', 'admitted']] expected [['c1', 'superseded']]"
+          ],
+          "final": {
+            "hotel": {
+              "active": "c1",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 5
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": false,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": false
+        },
+        "corrected": {
+          "active_payload": {
+            "hotel": null
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "5": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": null,
+              "status": "pending"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "superseded",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 5
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "superseded"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "naive": {
+          "active_payload": {
+            "hotel": "Hotel Alfama, Lisbon"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "5": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [
+            "final[hotel] = {'status': 'current', 'active': 'c1'} expected {'status': 'pending', 'active': None}",
+            "receipts = [['c1', 'admitted']] expected [['c1', 'superseded']]"
+          ],
+          "final": {
+            "hotel": {
+              "active": "c1",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 5
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": false,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": false
+        }
+      },
+      "title": "Check/write race"
+    },
+    {
+      "case": "independent-keys",
+      "note": "A hotel correction must not block the flight result.",
+      "policies": {
+        "broken_guard": {
+          "active_payload": {
+            "flight": "TP 1351, 08:40",
+            "hotel": null
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "flight": {
+                "active": null,
+                "status": "pending"
+              },
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "4": {
+              "flight": {
+                "active": null,
+                "status": "pending"
+              },
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "5": {
+              "flight": {
+                "active": null,
+                "status": "pending"
+              },
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "6": {
+              "flight": {
+                "active": "cf1",
+                "status": "current"
+              },
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "7": {
+              "flight": {
+                "active": "cf1",
+                "status": "current"
+              },
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "flight": {
+              "active": "cf1",
+              "status": "current"
+            },
+            "hotel": {
+              "active": null,
+              "status": "pending"
+            }
+          },
+          "history": [
+            {
+              "completion": "cf1",
+              "decision": "f1",
+              "outcome": "admitted",
+              "payload": "TP 1351, 08:40",
+              "tick": 6
+            },
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "superseded",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 7
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "cf1",
+              "admitted"
+            ],
+            [
+              "c1",
+              "superseded"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "corrected": {
+          "active_payload": {
+            "flight": "TP 1351, 08:40",
+            "hotel": null
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "flight": {
+                "active": null,
+                "status": "pending"
+              },
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "4": {
+              "flight": {
+                "active": null,
+                "status": "pending"
+              },
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "5": {
+              "flight": {
+                "active": null,
+                "status": "pending"
+              },
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "6": {
+              "flight": {
+                "active": "cf1",
+                "status": "current"
+              },
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "7": {
+              "flight": {
+                "active": "cf1",
+                "status": "current"
+              },
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "flight": {
+              "active": "cf1",
+              "status": "current"
+            },
+            "hotel": {
+              "active": null,
+              "status": "pending"
+            }
+          },
+          "history": [
+            {
+              "completion": "cf1",
+              "decision": "f1",
+              "outcome": "admitted",
+              "payload": "TP 1351, 08:40",
+              "tick": 6
+            },
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "superseded",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 7
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "cf1",
+              "admitted"
+            ],
+            [
+              "c1",
+              "superseded"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "naive": {
+          "active_payload": {
+            "flight": "TP 1351, 08:40",
+            "hotel": "Hotel Alfama, Lisbon"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "flight": {
+                "active": null,
+                "status": "pending"
+              },
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "4": {
+              "flight": {
+                "active": null,
+                "status": "pending"
+              },
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "5": {
+              "flight": {
+                "active": null,
+                "status": "pending"
+              },
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "6": {
+              "flight": {
+                "active": "cf1",
+                "status": "current"
+              },
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "7": {
+              "flight": {
+                "active": "cf1",
+                "status": "current"
+              },
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [
+            "final[hotel] = {'status': 'current', 'active': 'c1'} expected {'status': 'pending', 'active': None}",
+            "receipts = [['cf1', 'admitted'], ['c1', 'admitted']] expected [['cf1', 'admitted'], ['c1', 'superseded']]"
+          ],
+          "final": {
+            "flight": {
+              "active": "cf1",
+              "status": "current"
+            },
+            "hotel": {
+              "active": "c1",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "cf1",
+              "decision": "f1",
+              "outcome": "admitted",
+              "payload": "TP 1351, 08:40",
+              "tick": 6
+            },
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 7
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": false,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "cf1",
+              "admitted"
+            ],
+            [
+              "c1",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": false
+        }
+      },
+      "title": "Independent keys"
+    },
+    {
+      "case": "competing-corrections",
+      "note": "Two corrections replace the same decision (e.g. two devices). Neither is ordered by time.",
+      "policies": {
+        "broken_guard": {
+          "active_payload": {
+            "hotel": "Hotel Ribeira"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": null,
+                "status": "conflict"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": null,
+                "status": "conflict"
+              }
+            },
+            "5": {
+              "hotel": {
+                "active": null,
+                "status": "conflict"
+              }
+            },
+            "6": {
+              "hotel": {
+                "active": null,
+                "status": "conflict"
+              }
+            },
+            "7": {
+              "hotel": {
+                "active": null,
+                "status": "conflict"
+              }
+            },
+            "8": {
+              "hotel": {
+                "active": "ca",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": "ca",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "ca",
+              "decision": "h2a",
+              "outcome": "held-conflict",
+              "payload": "Hotel Ribeira",
+              "tick": 6
+            },
+            {
+              "completion": "cb",
+              "decision": "h2b",
+              "outcome": "held-conflict",
+              "payload": "Hotel Aeroporto",
+              "tick": 7
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "ca",
+              "held-conflict"
+            ],
+            [
+              "cb",
+              "held-conflict"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "corrected": {
+          "active_payload": {
+            "hotel": "Hotel Ribeira"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": null,
+                "status": "conflict"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": null,
+                "status": "conflict"
+              }
+            },
+            "5": {
+              "hotel": {
+                "active": null,
+                "status": "conflict"
+              }
+            },
+            "6": {
+              "hotel": {
+                "active": null,
+                "status": "conflict"
+              }
+            },
+            "7": {
+              "hotel": {
+                "active": null,
+                "status": "conflict"
+              }
+            },
+            "8": {
+              "hotel": {
+                "active": "ca",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": "ca",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "ca",
+              "decision": "h2a",
+              "outcome": "held-conflict",
+              "payload": "Hotel Ribeira",
+              "tick": 6
+            },
+            {
+              "completion": "cb",
+              "decision": "h2b",
+              "outcome": "held-conflict",
+              "payload": "Hotel Aeroporto",
+              "tick": 7
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "ca",
+              "held-conflict"
+            ],
+            [
+              "cb",
+              "held-conflict"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "naive": {
+          "active_payload": {
+            "hotel": "Hotel Aeroporto"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "5": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "6": {
+              "hotel": {
+                "active": "ca",
+                "status": "current"
+              }
+            },
+            "7": {
+              "hotel": {
+                "active": "cb",
+                "status": "current"
+              }
+            },
+            "8": {
+              "hotel": {
+                "active": "cb",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [
+            "final[hotel] = {'status': 'current', 'active': 'cb'} expected {'status': 'current', 'active': 'ca'}",
+            "receipts = [['ca', 'admitted'], ['cb', 'admitted']] expected [['ca', 'held-conflict'], ['cb', 'held-conflict']]",
+            "tick 7 [hotel] = {'status': 'current', 'active': 'cb'} expected {'status': 'conflict', 'active': None}"
+          ],
+          "final": {
+            "hotel": {
+              "active": "cb",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "ca",
+              "decision": "h2a",
+              "outcome": "admitted",
+              "payload": "Hotel Ribeira",
+              "tick": 6
+            },
+            {
+              "completion": "cb",
+              "decision": "h2b",
+              "outcome": "admitted",
+              "payload": "Hotel Aeroporto",
+              "tick": 7
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": false,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "ca",
+              "admitted"
+            ],
+            [
+              "cb",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": false
+        }
+      },
+      "title": "Competing corrections"
+    },
+    {
+      "case": "missing-update",
+      "note": "The correction exists elsewhere but reaches the authority only after the old result.",
+      "policies": {
+        "broken_guard": {
+          "active_payload": {
+            "hotel": null
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            },
+            "5": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": null,
+              "status": "pending"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 4
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "corrected": {
+          "active_payload": {
+            "hotel": null
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            },
+            "5": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            }
+          },
+          "desired_mismatches": [],
+          "final": {
+            "hotel": {
+              "active": null,
+              "status": "pending"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 4
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": true,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": true
+        },
+        "naive": {
+          "active_payload": {
+            "hotel": "Hotel Alfama, Lisbon"
+          },
+          "checkpoints": {
+            "1": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "2": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "3": {
+              "hotel": {
+                "active": null,
+                "status": "pending"
+              }
+            },
+            "4": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            },
+            "5": {
+              "hotel": {
+                "active": "c1",
+                "status": "current"
+              }
+            }
+          },
+          "desired_mismatches": [
+            "final[hotel] = {'status': 'current', 'active': 'c1'} expected {'status': 'pending', 'active': None}"
+          ],
+          "final": {
+            "hotel": {
+              "active": "c1",
+              "status": "current"
+            }
+          },
+          "history": [
+            {
+              "completion": "c1",
+              "decision": "h1",
+              "outcome": "admitted",
+              "payload": "Hotel Alfama, Lisbon",
+              "tick": 4
+            }
+          ],
+          "matches_prediction": true,
+          "meets_desired": false,
+          "prediction_mismatches": [],
+          "receipts": [
+            [
+              "c1",
+              "admitted"
+            ]
+          ],
+          "view_meets_desired": false
+        }
+      },
+      "title": "Missing update boundary"
+    }
+  ],
+  "cases_total": 11,
+  "summary": {
+    "broken_guard": {
+      "cases": 11,
+      "failed_desired": [
+        "check-write-race"
+      ],
+      "matches_prediction": 11,
+      "meets_desired": 10,
+      "view_failed": [
+        "check-write-race"
+      ],
+      "view_meets_desired": 10
+    },
+    "corrected": {
+      "cases": 11,
+      "failed_desired": [],
+      "matches_prediction": 11,
+      "meets_desired": 11,
+      "view_failed": [],
+      "view_meets_desired": 11
+    },
+    "naive": {
+      "cases": 11,
+      "failed_desired": [
+        "correction-before",
+        "out-of-order",
+        "cancel-before",
+        "cancel-after",
+        "duplicate",
+        "id-collision",
+        "check-write-race",
+        "independent-keys",
+        "competing-corrections",
+        "missing-update"
+      ],
+      "matches_prediction": 11,
+      "meets_desired": 1,
+      "view_failed": [
+        "out-of-order",
+        "cancel-before",
+        "cancel-after",
+        "id-collision",
+        "check-write-race",
+        "independent-keys",
+        "competing-corrections",
+        "missing-update"
+      ],
+      "view_meets_desired": 3
+    }
+  },
+  "synthetic": true,
+  "version": 1
+}
