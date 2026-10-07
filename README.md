@@ -7,6 +7,7 @@ arrives after the user corrected or cancelled the goal it was working on?**
 11 authored synthetic schedules for one fictional travel itinerary under three admission policies and
 shows, event by event, what each one makes active.
 
+**Write-up:** [When the agent finishes yesterday's task](https://timurista.ai/writing/when-the-agent-finishes-yesterdays-task/)  
 **Step through it:** [timurista.github.io/stale-completions-demo](https://timurista.github.io/stale-completions-demo/)
 
 ![Four-step diagram: job starts for goal h1, user replaces h1 with h2, the old job's result arrives, admission keeps it as superseded](screenshots/diagram.png)
